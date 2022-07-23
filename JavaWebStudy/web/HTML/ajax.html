@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <script>
+        function ajaxRequest(){
+            //首先要创建xmlHttpRequest
+            var xmlhttprequest = new XMLHttpRequest();
+            //调用open方法设置请求参数，true表示异步请求，就是在该请求得到响应前可以发送其它请求
+            xmlhttprequest.open("Get","http://localhost:8080/a/jsAjax",true);
+            //在send方法前绑定onreadystatechange事件
+            xmlhttprequest.onreadystatechange = function () {
+                if(xmlhttprequest.readyState == 4 && xmlhttprequest.status == 200){
+                    var parse = JSON.parse(xmlhttprequest.responseText);
+                    document.getElementById("div01").innerHTML = "name = " + parse.name + "   age = " + parse.age;
+                }
+            }
+            //调用send方法发送请求
+            xmlhttprequest.send();
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="Ajax Request" onclick="ajaxRequest()">
+<div id="div01"></div>
+</body>
+</html>

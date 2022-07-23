@@ -1,0 +1,14 @@
+<HTML>
+ <HEAD>
+	<style type="text/css">
+		#div1{
+			height:100px;
+			background-color:lightgreen;
+			position:absolute;
+		}
+	</style>
+ </HEAD>
+ <BODY>
+	<div id="div1"></div>
+ </BODY>
+</HTML>

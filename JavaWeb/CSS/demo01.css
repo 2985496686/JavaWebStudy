@@ -1,0 +1,21 @@
+/*标签样式表*/
+p{
+	color:red;
+}
+
+/*类样式*/
+.p1{
+	color:green;
+	font-size:20px;
+	font-family:"华文彩云";
+}
+
+/*ID样式*/
+#x1{
+	color:pink;
+}
+
+/*组合样式*/
+div p{
+		color:yellow;
+}

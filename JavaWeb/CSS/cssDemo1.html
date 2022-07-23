@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<!-- 这是内部样式表 -->
+		<style type="text/css">
+			/*在该标签里是css环境*/
+
+			/*标签样式表*/
+			p{
+				color:red;
+			}
+
+			/*类样式*/
+			.p1{
+				color:green;
+				font-size:20px;
+				font-family:"华文彩云";
+			}
+
+			/*ID样式*/
+			#x1{
+				color:pink;
+
+			}
+
+			/*组合样式*/
+			div p{
+				color:yellow;
+			}
+		</style>
+
+		<link rel="stylesheet" href="demo01.css">
+	</head>
+	<body>
+		<p>这里是段落一</p>
+		<p ID="x1">这里是段落二</p>
+		<p class="p1">这里是段落三</p>
+		<p>这里是段落四</p>
+		<!--  这里是嵌入样式表  -->
+		<p><span style="font-size:20px;font-weight:bolder;color=purple">这是段落五</span></p>
+		<div>
+			<p>Hello world！！！</p>
+		</div>
+	</body>
+</html>
+
+<!--
+1.css最基本分类：标签样式表、类样式表、ID样式表
+
+2.css从位置上的分类：嵌入样式表、内部样式表、外部样式表
+-->

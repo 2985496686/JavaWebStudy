@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>表单标签的学习</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<span color="blue"></span>
+		<form action="demo4.html" method="post">
+			昵称：<input type="text" name="name" value="Name"/><br/><br/>
+			密码：<input type="password" name="pad"/><br/><br/>
+			性别：<input type="radio" name="gender" value="male">男
+			      <input type="radio" name="gender" value="female" checked="checked">女<br/><br/>
+			爱号：<input type="checkbox" name="hobby" value="basketball">篮球
+			      <input type="checkbox" name="hobby" value="basketball">足球
+				  <input type="checkbox" name="hobby" value="pingpong">乒乓球<br/><br/>
+			星座：<select name="star">
+					<option>白羊座</option>
+					<option>金牛座</option>
+					<option>天蝎座</option>
+					<option>巨蟹座</option>
+					<option>双鱼座</option>
+					<option>处女座</option>
+				  </select><br/><br/>
+			备注：<br/><textarea name="remake" rows="4" cols="50"></textarea><br/>
+			<input type="submit" value="注册"/>
+			<input type="reset" value="重置"/>
+		</form>
+	</body>
+</html>
+
+<!--
+
+表单from
+
+input type="text" 表示文本框，其中name属性必须要写，否则这个文本框是不会发给服务器的。
+
+input type="password" 表示密码框
+
+input type="radio" 表示单选按钮，需要注意，只有保持name属性一致，才能达到互斥的效果，其中可以通过checked属性来指定选项的	默认值
+
+input type="checkbox"表示复选框。name属性建议保持一致，这样将来发送给服务器的就是一共数组
+
+select表示下拉列表。每一个选项是option，其中value属性是发给服务器的值，selected表示默认选中的项
+
+textarea表示多行文本框，它的value是开始结束标签之间的内容。
+
+input type="submit"表示提交按钮
+
+input type="reset"表示重置按钮
+
+input type="button"表示普通按钮
+
+-->

@@ -1,0 +1,31 @@
+body{
+	background-color:Gainsboro;
+}
+
+#div_container{
+	height:100%;
+	width:80%;
+	margin-left:10%;
+	background-color:Beige ;
+
+}
+#div_fruit {
+	height:60%;
+	width:60%;
+	position:absolute;
+	left:20%;
+	top:20%;
+}
+#tab_fruit{
+	width:100%;
+	border:1px black solid;
+	border-collapse:collapse;
+	text-align:center;
+	line-height:28px;
+	font-size:16px;
+	font-family:"黑体"
+	font-weight:lighter;
+}
+#tab_fruit tr , #tab_fruit td,#tab_fruit th{
+	border:1px black solid;
+}

@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="demo02.css">
+		<script type="text/javascript" src="javaScriptdemo01.js"></script>
+	</head>
+	<body>
+		<div id="div_container">
+			<div id="div_fruit">
+				<table id="tab_fruit">
+					<tr onmouseover="showBGColor()" onmouseout="recoverBGColor()">
+						<th>名称</th>
+						<th>单价</th>
+						<th>数量</th>
+						<th>小计</th>
+						<th>操作</th>
+					</tr>
+					<tr onmouseover="showBGColor()" onmouseout="recoverBGColor()">
+						<td>苹果</td>
+						<td>16</td>
+						<td>3</td>
+						<td>34</td>
+						<td><img src="delete.jpeg" width="25px" height="25px"></td>
+					</tr>
+					<tr onmouseover="showBGColor()" onmouseout="recoverBGColor()">
+						<td>香蕉</td>
+						<td>14</td>
+						<td>43</td>
+						<td>23</td>
+						<td><img src="delete.jpeg" width="25px" height="25px"></td>
+					</tr>
+					<tr onmouseover="showBGColor()" onmouseout="recoverBGColor()">
+						<td>菠萝</td>
+						<td>12</td>
+						<td>12</td>
+						<td>43</td>
+						<td><img src="delete.jpeg" width="25px" height="25px"></td>
+					</tr>
+					<tr onmouseover="showBGColor()" onmouseout="recoverBGColor()">
+						<td>总计</td>
+						<td colspan="4"> 845</td>
+					</tr>
+				</table>
+				<br/><br/>
+				<div id="div_add_fruit">
+					<table id="tab_add_fruit">
+						<tr>
+							<td>名称:</td>
+							<td><input type="text" id="fname"></td>
+						</tr>
+						<tr>
+							<td>单价:</td>
+							<td><input type="text" id="fprice"></td>
+						</tr>
+						<tr>
+							<td>数量:</td>
+							<td><input type="text" id="fcount"></td>
+						</tr>
+						<tr>
+							<td><input type="button" value="添加"></td>
+							<td id="td_bt"><input type="button" value="重置"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

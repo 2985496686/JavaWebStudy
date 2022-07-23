@@ -1,0 +1,33 @@
+<HTML>
+ <HEAD>
+	<style type="text/css">
+		body{
+			margin:0;
+			padding:0;
+		}
+		#div1{
+			height:30%;
+			width:30%;
+			background-color:lightgreen;
+			/*绝对定位，屏幕左上角为(0,0),若不写位置坐标默认从(0,0)开始*/
+			position:relative;
+			/*位置坐标  (100,30)*/
+			left:100px;
+			top:30px;
+			float:top;
+		}
+		#div2{
+			height:30%;
+			width:30%;
+			background-color:pink;
+			position:relative ;
+		}
+	</style>
+ </HEAD>
+ <BODY>
+	<div id="div1">&nbsp</div>
+	<div id="div2">&nbsp</div>
+	<div id="div3">&nbsp</div>
+	<div id="div4">&nbsp</div>
+ </BODY>
+</HTML>

@@ -1,0 +1,12 @@
+1.Tomcat安装和配置。
+2.Tomcat目录说明：
+  bin     可执行文件目录
+  conf    配置文件目录
+  lib     存放lib的目录
+  logs    日志文件目录
+  webapps 项目部署目录
+  work    工作目录
+  temp    临时目录
+3.配置环境变量，需要配置JAVA_HOME
+4.启动Tomcat，访问主页。
+5.新建web项目在tomcat中webapps目录下部署，idea会自动在创建部署目录。

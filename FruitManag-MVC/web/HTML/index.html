@@ -1,0 +1,76 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="../CSS/index.css">
+		<script type="text/javascript" src="../index.js"></script>
+	</head>
+	<body>
+		<div id="div_container">
+			<div id="div_fruit">
+				<form th:action="@{/fruit.do}" method="post">
+					<input type="hidden" name="oper" value="search">
+					请输入查询关键字：<input type="text" name="keyword" th:value="${session.keyword}"><input type="submit" value="查询">
+				</form>
+				<table id="tab_fruit">
+					<tr>
+						<th>名称1</th>
+						<th>单价</th>
+						<th>数量</th>
+						<th>备注</th>
+						<th>操作</th>
+					</tr>
+
+					<tr th:if="${#lists.isEmpty(session.fruitList)}">
+						<td colspan="5">当前没有库存</td>
+					</tr>
+					<tr th:unless="${#lists.isEmpty(session.fruitList)}" th:each="Fruit :${session.fruitList}">
+						<!--<td> <a th:text="${Fruit.fname}" th:href="@{'/edit.do?fid=' + ${Fruit.fid}}"></a></td>-->
+						<td> <a th:text="${Fruit.fname}" th:href="@{/fruit.do(operation='edit' ,fid=${Fruit.fid})}"></a></td>
+						<td th:text="${Fruit.fprice}"></td>
+						<td th:text="${Fruit.fcount}"></td>
+						<td th:text="${Fruit.getFremark()}"></td>
+						<td><img src="../imgs/delete.jpeg" width="25px" height="25px" th:onclick="|delFruit(${Fruit.getFid()})|"/></td>
+					</tr>
+					<tr>
+						<td>总计</td>
+						<td colspan="5">0</td>
+					</tr>
+				</table>
+					<table>
+						<tr><input type="button" value="首 页"  th:onclick="|getPage(${session.pageCount},1)|"></tr>
+						<tr><input type="button" value="上一页" th:onclick="|getPage(${session.pageCount},${session.pageNo - 1})|"></tr>
+						<tr><input type="button" value="下一页" th:onclick="|getPage(${session.pageCount},${session.pageNo + 1})|"></tr>
+						<tr><input type="button" value="尾 页"  th:onclick="|getPage(${session.pageCount},${session.pageCount})|"></tr>
+					</table>
+				<br/><br/>
+				<div id="div_add_fruit">
+					<form th:action="@{/fruit.do}" method="post">
+						<input type="hidden" name="operation" value="add">
+					<table id="tab_add_fruit">
+						<tr>
+							<td>名称:</td>
+							<td><input type="text"  name="fname"></td>
+						</tr>
+						<tr>
+							<td>单价:</td>
+							<td><input type="text" name="fprice"></td>
+						</tr>
+						<tr>
+							<td>数量:</td>
+							<td><input type="text" name="fcount"></td>
+						</tr>
+						<tr>
+							<td>备注:</td>
+							<td><input type="text" name="fremark"></td>
+						</tr>
+						<tr>
+							<td><input type="submit" value="添加" ></td>
+							<td id="td_bt"><input type="reset" value="重置"></td>
+						</tr>
+					</table>
+						</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

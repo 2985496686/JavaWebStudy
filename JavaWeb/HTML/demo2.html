@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>表格标签的学习</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<table border="1" width="200" cellspacing="0" cellpadding="4">
+			<tr>
+				<th>张三</th>
+				<th>李四</th>
+				<th>王五</th>
+				<th>刘六</th>
+			</tr>
+			<tr>
+				<td>张三</td>
+				<td>李四</td>
+				<td>王五</td>
+				<td>刘六</td>
+			</tr>
+		</table>
+
+		<table border="1" width="100" >
+			<tr>
+				<td rowspan="2"><img src="shuo.jpg" width="24" height="24"></td>
+				<td><img src="shuo.jpg" width="24" height="24"></td>
+				<td><img src="shuo.jpg" width="24" height="24"></td>
+				<td><img src="shuo.jpg" width="24" height="24"></td>
+			</tr>
+			<tr>
+				<td><img src="shuo.jpg" width="24" height="24"></td>
+				<td><img src="shuo.jpg" width="24" height="24"></td>
+				<td><img src="shuo.jpg" width="24" height="24"></td>
+			</tr>
+			<tr>
+				<td><img src="shuo.jpg" width="24" height="24"></td>
+				<td><img src="shuo.jpg" width="24" height="24"></td>
+				<td><img src="shuo.jpg" width="24" height="24"></td>
+				<td><img src="shuo.jpg" width="24" height="24"></td>
+			</tr>
+			<tr>
+				<td colspan="4"  align="center"><img src="shuo.jpg" width="24" height="24"></td>
+			</tr>
+		</table>
+	</body>
+</html>
+
+<!--
+表格    table
+行      tr
+列      td
+表头列  th
+
+table中有如下属性：
+- width-----------表格宽度
+- border----------表格边框粗细
+- cellspacing-----单元格间距
+- cellpadding-----单元格填充
+
+tr中有一个属性 ： align   ->   center(居中)，left(左对齐)，right(右对齐)
+
+td中有两个属性：rowspan 和colspan分别表示行合并和列合并
+-->

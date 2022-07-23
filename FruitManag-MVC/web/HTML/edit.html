@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <title>edit</title>
+</head>
+<body>
+<div id="div_container" th:object="${#request.getAttribute('fruit')}">
+    <div id="div_fruit">
+        <form th:action="@{/fruit.do}" method="post">
+            <input type="hidden" name="operation" value="update">
+            <table id="tab_fruit">
+                <input type="hidden" name="fid" th:value="*{fid}"/>
+                <tr>
+                    <th>名称:</th>
+                    <td><input type="text" name="fname"  th:value="*{fname}"/></td>
+                </tr>
+                <tr>
+                    <th>单价:</th>
+                    <td><input type="text" name="fprice"  th:value="*{fprice}"/></td>
+                </tr>
+                <tr>
+                    <th>数量:</th>
+                    <td><input type="text" name="fcount" th:value="*{fcount}"/></td>
+                </tr>
+                <tr>
+                    <th>备注：</th>
+                    <td><input type="text" name="fremark" th:value="*{fremark}"/></td>
+                </tr>
+                <tr>
+                    <th colspan="2"><input type="submit" value="提交"/></th>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>
